@@ -12,6 +12,8 @@ You should consider upgrading via the 'pip install --upgrade pip' command.[0m
 # Loading NLTK  
 import nltk  
 ```
+
+# BASIC FUNCTIONS IN NLTK  
 1.) Tokenization
 
 2.) Stemming
