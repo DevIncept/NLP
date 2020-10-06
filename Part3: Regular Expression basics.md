@@ -1,0 +1,61 @@
+![Let's Learn Regex](https://github.com/N-Harish/Open-contributions/blob/master/regex.jpeg)
+
+# Regular Expression/RegEx
+
+
+## What is RegEx 🤔
+
+* RegEx are sequences of characters that are used as a pattern to search a string
+* These patterns are used in string functions such as find and replace, change a sub-string and many more
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+## Why RegEx
+
+* Ever Imagined a situation where you have a document of say 100 pages and you recently recognized that a particular word in that document is misspelled, so naturally you would     use find and replace to replace that particular word. On doing so you are indirectly using RegEx to match the string.
+* RegEx also makes validation (Password, Email, Dates and many more) simple since just we need to check wheather the data is in desired format
+* Often when doing NLP task we may need to process the text so RegEx can help in simplifying our task
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+## Use of RegEx in NLP
+
+* To clean the text i.e. remove unwanted punctuations, white space, split sentences into list of words (tokens)
+* Remove Hashtags and user handles from text (tweets)
+* remove urls 
+* Extract the content inside html tags by ignoring all the tags
+* Extracting emails, phone numbers, name as well split the email into (domain name,company name) and many more from text
+* Split the text into root word (Stemming)
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+## Common RegEx patterns 
+
+![Basic RegEx](https://github.com/N-Harish/Open-contributions/blob/master/regular-expression-cheat-sheet.JPG)
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+## Regex Quantifiers and Groups
+
+
+![RegEx Quantifier](https://github.com/N-Harish/Open-contributions/blob/master/RegEx%20quantifiers.JPG)  ![RegEx Group](https://github.com/N-Harish/Open-contributions/blob/master/Regex%20Group.JPG)
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+## RegEx character classes
+
+![regex character class](https://github.com/N-Harish/Open-contributions/blob/master/regex%20character%20class.JPG)
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+## Python re module functions
+
+* ```re.findall(P, S)``` :- Matches all the occurences of the Pattern ```P``` in the string ```S```.
+* ```re.search(P, S)``` :- Matches the first instance of Pattern ```P``` in string ```S```.
+* ```re.split(P, S)``` :- Splits the string ```S``` into a list using ```P``` as a delimiter.
+* ```re.sub(P, R, S)``` :- Replace ```P``` with ```R``` in string ```S```.
+* ```re.compile(P)``` :- Used to store Pattern ```P``` for future use.
+* ```re.finditer(P, S)``` :- Return an iterator yielding match objects over all non-overlapping matches for the pattern ```P``` in string ```S```.
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
