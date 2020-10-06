@@ -1,53 +1,117 @@
-#  Lemmatization And Stemming In Natural Language Processing
->Languages we speak and write are made up of several words often derived from one another. When a language contains words that are derived from another word as their use in the speech changes is called **Inflected Language**
-
-> ####  "In grammar, inflection is the modification of a word to express different grammatical categories such as tense, case, voice, aspect, person, number, gender, and mood. An inflection expresses one or more grammatical categories with a prefix, suffix or infix, or another internal modification such as a vowel change" [Wikipedia]
-
->The degree of inflection may be higher or lower in a language. As you have read the definition of inflection with respect to grammar, you can understand that an inflected word(s) will have a common root form. Let's look at a few examples,
-
-![img](https://res.cloudinary.com/dyd911kmh/image/upload/f_auto,q_auto:best/v1539984207/stemminglemmatization_n8bmou.jpg)
-
->Above examples helps us to understand the concept of normalization of text, although normalization of text is not restricted to only written document but to speech as well. 
-
-The Normalization in this context can be of two Types 
-* Stemming 
-* Lemmatization
-
->Stemming and Lemmatization helps us to achieve the root forms (sometimes called synonyms in search context) of inflected (derived) words.Stemming is different to Lemmatization in the approach it uses to produce root forms of words and the word produced. We will Learn more about this below.
-
-## Stemming
-
-> **"Stemming is the process of reducing inflection in words to their root forms such as mapping a group of words to the same stem even if the stem itself is not a valid word in the Language."**
-
-> Stem (root) is the part of the word to which you add inflectional (changing/deriving) affixes such as (-ed,-ize, -s,-de,mis). So stemming a word or sentence may result in words that are not actual words. Stems are created by removing the suffixes or prefixes used with a word.
-
->There are various Stemming Algorithms / methods in the NLTK library, These methods can be seen in the following diagram.
-![img](https://www.tutorialspoint.com/natural_language_toolkit/images/stemming_algorithms.jpg)
-
-* Porter stemmer: *This stemming algorithm is an older one. It’s from the 1980s and its main concern is removing the common endings to words so that they can be resolved to a common form*
-* Snowball stemmer: This algorithm is also known as the Porter2 stemming algorithm. It is almost universally accepted as better than the Porter stemmer, even being acknowledged as such by the individual who created the Porter stemmer.
-* Lancaster stemmer: Just for fun, the Lancaster stemming algorithm is another algorithm that you can use. This one is the most aggressive stemming algorithm of the bunch.
-* Regular Expression stemm: It basically takes a single regular expression and removes any prefix or suffix that matches the expression.
-
-Some basic Examples of Stemming- 
-![img](https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQB544U1IwwokOrtUpO3iOx4riHTzSXnChPWg&usqp=CAU)
-
-# Lemmatization
-#### "Lemmatization, unlike Stemming, reduces the inflected words properly ensuring that the root word belongs to the language. In Lemmatization root word is called Lemma. A lemma (plural lemmas or lemmata) is the canonical form, dictionary form, or citation form of a set of words."
-
->***For example, runs, running, ran are all forms of the word run, therefore run is the lemma of all these words. Because lemmatization returns an actual word of the language, it is used where it is necessary to get valid words.***
-
-Some Examples of Lemmatization are as follows - 
-
-![img](https://kavita-ganesan.com/wp-content/uploads/2019/02/Screen-Shot-2019-02-20-at-4.49.08-PM.png)
-
-#### *****The Major Point to Note is That each word that is Lemmatized belongs to a language unlike Stemming.*****
-
-# Lemmatization Vs Stemming
-> After Reading the full article we can derive the following inferences about the difference between Lemmatization and stemming.
-* Stemming and Lemmatization both generate the root form of the inflected words. The difference is that stem might not be an actual word whereas, lemma is an actual language word.
-* Stemming follows an algorithm with steps to perform on the words which makes it faster. Whereas, in lemmatization, we use WordNet corpus and a corpus for stop words as well to produce lemma which makes it slower than stemming.
-
-![img](https://miro.medium.com/max/2050/1*ES5bt7IoInIq2YioQp2zcQ.png)
-
-> ****We can see how the meaning of the word is conserved in Lemmatization as compared to Stemming****
+NLTK is a powerful Python package that provides a set of diverse natural languages algorithms. It is free, opensource, easy to use, large community, and well documented. NLTK consists of the most common algorithms such as tokenizing, part-of-speech tagging, stemming, sentiment analysis, topic segmentation, and named entity recognition. NLTK helps the computer to analysis, preprocess, and understand the written text.  
+  
+!pip install nltk  
+Requirement already satisfied: nltk in /home/northout/anaconda2/lib/python2.7/site-packages  
+Requirement already satisfied: six in /home/northout/anaconda2/lib/python2.7/site-packages (from nltk)  
+[33mYou are using pip version 9.0.1, however version 10.0.1 is available.  
+You should consider upgrading via the 'pip install --upgrade pip' command.[0m  
+#Loading NLTK  
+import nltk  
+Tokenization  
+Tokenization is the first step in text analytics. The process of breaking down a text paragraph into smaller chunks such as words or sentence is called Tokenization. Token is a single entity that is building blocks for sentence or paragraph.  
+  
+Sentence Tokenization  
+Sentence tokenizer breaks text paragraph into sentences.  
+  
+from nltk.tokenize import sent_tokenize  
+text="""Hello Mr. Smith, how are you doing today? The weather is great, and city is awesome.  
+The sky is pinkish-blue. You shouldn't eat cardboard"""  
+tokenized_text=sent_tokenize(text)  
+print(tokenized_text)  
+['Hello Mr. Smith, how are you doing today?', 'The weather is great, and city is awesome.', 'The sky is pinkish-blue.', "You shouldn't eat cardboard"]  
+Here, the given text is tokenized into sentences.  
+  
+Word Tokenization  
+Word tokenizer breaks text paragraph into words.  
+  
+from nltk.tokenize import word_tokenize  
+tokenized_word=word_tokenize(text)  
+print(tokenized_word)  
+['Hello', 'Mr.', 'Smith', ',', 'how', 'are', 'you', 'doing', 'today', '?', 'The', 'weather', 'is', 'great', ',', 'and', 'city', 'is', 'awesome', '.', 'The', 'sky', 'is', 'pinkish-blue', '.', 'You', 'should', "n't", 'eat', 'cardboard']  
+Frequency Distribution  
+from nltk.probability import FreqDist  
+fdist = FreqDist(tokenized_word)  
+print(fdist)  
+<FreqDist with 25 samples and 30 outcomes>  
+fdist.most_common(2)  
+[('is', 3), (',', 2)]  
+# Frequency Distribution Plot  
+import matplotlib.pyplot as plt  
+fdist.plot(30,cumulative=False)  
+plt.show()  
+  
+Stopwords  
+Stopwords considered as noise in the text. Text may contain stop words such as is, am, are, this, a, an, the, etc.  
+  
+In NLTK for removing stopwords, you need to create a list of stopwords and filter out your list of tokens from these words.  
+  
+from nltk.corpus import stopwords  
+stop_words=set(stopwords.words("english"))  
+print(stop_words)  
+{'their', 'then', 'not', 'ma', 'here', 'other', 'won', 'up', 'weren', 'being', 'we', 'those', 'an', 'them', 'which', 'him', 'so', 'yourselves', 'what', 'own', 'has', 'should', 'above', 'in', 'myself', 'against', 'that', 'before', 't', 'just', 'into', 'about', 'most', 'd', 'where', 'our', 'or', 'such', 'ours', 'of', 'doesn', 'further', 'needn', 'now', 'some', 'too', 'hasn', 'more', 'the', 'yours', 'her', 'below', 'same', 'how', 'very', 'is', 'did', 'you', 'his', 'when', 'few', 'does', 'down', 'yourself', 'i', 'do', 'both', 'shan', 'have', 'itself', 'shouldn', 'through', 'themselves', 'o', 'didn', 've', 'm', 'off', 'out', 'but', 'and', 'doing', 'any', 'nor', 'over', 'had', 'because', 'himself', 'theirs', 'me', 'by', 'she', 'whom', 'hers', 're', 'hadn', 'who', 'he', 'my', 'if', 'will', 'are', 'why', 'from', 'am', 'with', 'been', 'its', 'ourselves', 'ain', 'couldn', 'a', 'aren', 'under', 'll', 'on', 'y', 'can', 'they', 'than', 'after', 'wouldn', 'each', 'once', 'mightn', 'for', 'this', 'these', 's', 'only', 'haven', 'having', 'all', 'don', 'it', 'there', 'until', 'again', 'to', 'while', 'be', 'no', 'during', 'herself', 'as', 'mustn', 'between', 'was', 'at', 'your', 'were', 'isn', 'wasn'}  
+Removing Stopwords  
+filtered_sent=[]  
+for w in tokenized_sent:  
+    if w not in stop_words:  
+        filtered_sent.append(w)  
+print("Tokenized Sentence:",tokenized_sent)  
+print("Filterd Sentence:",filtered_sent)  
+Tokenized Sentence: ['Hello', 'Mr.', 'Smith', ',', 'how', 'are', 'you', 'doing', 'today', '?']  
+Filterd Sentence: ['Hello', 'Mr.', 'Smith', ',', 'today', '?']  
+Lexicon Normalization  
+Lexicon normalization considers another type of noise in the text. For example, connection, connected, connecting word reduce to a common word "connect". It reduces derivationally related forms of a word to a common root word.  
+  
+Stemming  
+Stemming is a process of linguistic normalization, which reduces words to their word root word or chops off the derivational affixes. For example, connection, connected, connecting word reduce to a common word "connect".  
+  
+# Stemming  
+from nltk.stem import PorterStemmer  
+from nltk.tokenize import sent_tokenize, word_tokenize  
+  
+ps = PorterStemmer()  
+  
+stemmed_words=[]  
+for w in filtered_sent:  
+    stemmed_words.append(ps.stem(w))  
+  
+print("Filtered Sentence:",filtered_sent)  
+print("Stemmed Sentence:",stemmed_words)  
+Filtered Sentence: ['Hello', 'Mr.', 'Smith', ',', 'today', '?']  
+Stemmed Sentence: ['hello', 'mr.', 'smith', ',', 'today', '?']  
+Lemmatization  
+Lemmatization reduces words to their base word, which is linguistically correct lemmas. It transforms root word with the use of vocabulary and morphological analysis. Lemmatization is usually more sophisticated than stemming. Stemmer works on an individual word without knowledge of the context. For example, The word "better" has "good" as its lemma. This thing will miss by stemming because it requires a dictionary look-up.  
+  
+#Lexicon Normalization  
+#performing stemming and Lemmatization  
+  
+from nltk.stem.wordnet import WordNetLemmatizer  
+lem = WordNetLemmatizer()  
+  
+from nltk.stem.porter import PorterStemmer  
+stem = PorterStemmer()  
+  
+word = "flying"  
+print("Lemmatized Word:",lem.lemmatize(word,"v"))  
+print("Stemmed Word:",stem.stem(word))  
+Lemmatized Word: fly  
+Stemmed Word: fli  
+POS Tagging  
+The primary target of Part-of-Speech(POS) tagging is to identify the grammatical group of a given word. Whether it is a NOUN, PRONOUN, ADJECTIVE, VERB, ADVERBS, etc. based on the context. POS Tagging looks for relationships within the sentence and assigns a corresponding tag to the word.  
+  
+sent = "Albert Einstein was born in Ulm, Germany in 1879."  
+tokens=nltk.word_tokenize(sent)  
+print(tokens)  
+['Albert', 'Einstein', 'was', 'born', 'in', 'Ulm', ',', 'Germany', 'in', '1879', '.']  
+nltk.pos_tag(tokens)  
+[('Albert', 'NNP'),  
+ ('Einstein', 'NNP'),  
+ ('was', 'VBD'),  
+ ('born', 'VBN'),  
+ ('in', 'IN'),  
+ ('Ulm', 'NNP'),  
+ (',', ','),  
+ ('Germany', 'NNP'),  
+ ('in', 'IN'),  
+ ('1879', 'CD'),  
+ ('.', '.')]  
+POS tagged: Albert/NNP Einstein/NNP was/VBD born/VBN in/IN Ulm/NNP ,/, Germany/NNP in/IN 1879/CD ./.  
