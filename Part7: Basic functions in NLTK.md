@@ -9,9 +9,16 @@ Requirement already satisfied: six in /home/northout/anaconda2/lib/python2.7/sit
 You should consider upgrading via the 'pip install --upgrade pip' command.[0m  
 ```
 ```
-#Loading NLTK  
+# Loading NLTK  
 import nltk  
 ```
+1.) Tokenization
+2.) Stemming
+3.) Lemmatization
+4.) POS tagging
+5.) Parsing
+6.) Chunking  
+
 ## Tokenization  
 Tokenization is the first step in text analytics. The process of breaking down a text paragraph into smaller chunks such as words or sentence is called Tokenization. Token is a single entity that is building blocks for sentence or paragraph.  
   
@@ -150,4 +157,66 @@ print(tokens)
  ('1879', 'CD'),  
  ('.', '.')]  
  ```
-POS tagged: Albert/NNP Einstein/NNP was/VBD born/VBN in/IN Ulm/NNP ,/, Germany/NNP in/IN 1879/CD ./.  
+POS tagged: Albert/NNP Einstein/NNP was/VBD born/VBN in/IN Ulm/NNP ,/, Germany/NNP in/IN 1879/CD ./.    
+
+## Chunking  
+Chunking is used to add more structure to the sentence by following parts of speech (POS) tagging. It is also known as shallow parsing. The resulted group of words is called "chunks." In shallow parsing, there is maximum one level between roots and leaves while deep parsing comprises of more than one level. Shallow Parsing is also called light parsing or chunking.  
+
+The primary usage of chunking is to make a group of "noun phrases." The parts of speech are combined with regular expressions.  
+
+### Rules for Chunking:  
+
+There are no pre-defined rules, but you can combine them according to need and requirement.  
+
+For example, you need to tag Noun, verb (past tense), adjective, and coordinating junction from the sentence. You can use the rule as below  
+
+chunk:{<NN.?>*<VBD.?>*<JJ.?>*<CC>?}  
+
+Following table shows what the various symbol means:  
+```
+Name of symbol	Description
+.	Any character except new line
+*	Match 0 or more repetitions
+?	Match 0 or 1 repetitions  
+```
+Now Let us write the code to understand rule better  
+```
+from nltk import pos_tag
+from nltk import RegexpParser
+text ="learn php from guru99 and make study easy".split()
+print("After Split:",text)
+tokens_tag = pos_tag(text)
+print("After Token:",tokens_tag)
+patterns= """mychunk:{<NN.?>*<VBD.?>*<JJ.?>*<CC>?}"""
+chunker = RegexpParser(patterns)
+print("After Regex:",chunker)
+output = chunker.parse(tokens_tag)
+print("After Chunking",output)
+```
+#### Output
+
+``` 
+After Split: ['learn', 'php', 'from', 'guru99', 'and', 'make', 'study', 'easy']
+After Token: [('learn', 'JJ'), ('php', 'NN'), ('from', 'IN'), ('guru99', 'NN'), ('and', 'CC'), ('make', 'VB'), ('study', 'NN'), ('easy', 'JJ')]
+After Regex: chunk.RegexpParser with 1 stages:
+RegexpChunkParser with 1 rules:
+       <ChunkRule: '<NN.?>*<VBD.?>*<JJ.?>*<CC>?'>
+After Chunking (S
+  (mychunk learn/JJ)
+  (mychunk php/NN)
+  from/IN
+  (mychunk guru99/NN and/CC)
+  make/VB
+  (mychunk study/NN easy/JJ))
+  
+ ``` 
+The conclusion from the above example: "make" is a verb which is not included in the rule, so it is not tagged as mychunk  
+
+### Use Case of Chunking  
+Chunking is used for entity detection. An entity is that part of the sentence by which machine get the value for any intention
+``` 
+Example: 
+Temperature of New York. 
+Here Temperature is the intention and New York is an entity. 
+``` 
+In other words, chunking is used as selecting the subsets of tokens. Please follow the below code to understand how chunking is used to select the tokens. In this example, you will see the graph which will correspond to a chunk of a noun phrase. We will write the code and draw the graph for better understanding.
