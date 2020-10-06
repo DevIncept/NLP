@@ -13,11 +13,14 @@ You should consider upgrading via the 'pip install --upgrade pip' command.[0m
 import nltk  
 ```
 1.) Tokenization
+
 2.) Stemming
+
 3.) Lemmatization
+
 4.) POS tagging
-5.) Parsing
-6.) Chunking  
+
+5.) Chunking  
 
 ## Tokenization  
 Tokenization is the first step in text analytics. The process of breaking down a text paragraph into smaller chunks such as words or sentence is called Tokenization. Token is a single entity that is building blocks for sentence or paragraph.  
