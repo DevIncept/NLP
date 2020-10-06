@@ -54,17 +54,18 @@ print(stop_words)
 And the output is as below.   
 ![image](https://miro.medium.com/max/639/1*fmgVQR4IO7rzi42ofkJovQ.png)  
 It is common practice that removal of these words are done prior to analyzing the text.  
-#What is Part of Speech (POS) tagging?  
+# What is Part of Speech (POS) tagging?    
 This is classifying words into parts of speech of an assigned language. For example a certain word can be a noun or a verb or something else. This feature is very powerful and is massively helpful for further analysis.  
 The following example code snippet outputs the POS tags of the sample text which was used throughout the blog post. The entire text is broken to sentences in the initial step. Every individual sentence is taken and tokenized into words. These words are finally fed into the parts of speech tagger.
-''' import nltk  
+``` import nltk  
 from nltk.tokenize import sent_tokenize, word_tokenize  
 sample_text = “Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.”  
 tokenized_sentences = sent_tokenize(sample_text)  
 for sentence in tokenized_sentences :  
 tokenized_words = word_tokenize(sentence)  
 tagged_words = nltk.pos_tag(tokenized_words)  
-print(tagged_words) '''
+print(tagged_words) 
+```
 Execution of this outputs the following result.  
 ![image](https://miro.medium.com/max/643/1*WrA7eI5z35rnn_SWd6BOgA.png)  
 Unlike the previous examples of tokenizers and stopwords, this outputs tuples. The first element of the tuple is the word while the second part is the POS tag. Some example of POS tags are listed below. You can access the full list by [!clicking here.](https://www.ling.upenn.edu/courses/Fall_2003/ling001/penn_treebank_pos.html)
