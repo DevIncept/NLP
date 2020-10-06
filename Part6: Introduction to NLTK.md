@@ -9,11 +9,11 @@ The following list contains other widely used tools for Natural Language Process
 4. Stanford’s Core NLP Suite
 # How to install NLTK?  
 Python is a must to be installed prior to the installation of NLTK. The following command can be used to install Python if you are on Linux or Mac.  
-> sudo apt-get install python3  
+''' sudo apt-get install python3 '''   
 If you are a windows user, you can use this link to download Python from the official website.  
 Installation of NLTK to the workstation can be done using the following command. Bash or cmd.exe can be used to execute it.  
-> pip install nltk
-It is recommended that all components from NLTK is downloaded. This includes some sample text collections as well. Type the following text in a file and run it using python.  
+ ''' pip install nltk '''  
+It is recommended that all components from NLTK is downloaded. This includes some sample text collections as well. Type the following text in a file and run it using python.    
 ''' import nltk    
 nltk.download() '''  
 This will pop a user interface which contains all the packages. Select them and click download.  
