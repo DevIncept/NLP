@@ -60,4 +60,4 @@ print(result)
 ```
 
 
-$Run these 4 code snippet and implement them in your assignment notebook$
+## _Run these 4 code snippets and implement them in your assignment notebook_
