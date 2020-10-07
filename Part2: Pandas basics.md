@@ -66,7 +66,7 @@ Anaconda is open-source software that contains Jupyter, spyder, etc that are use
 </p>
 To install Pandas on Linux, just type the following command in the Terminal Window and press Enter. Linux will automatically download and install the packages and files required to run Pandas Environment in Python:
 
-![shortcut](extras/Linux_Installation.jpg)
+![shortcut](https://raw.githubusercontent.com/Learn-Write-Repeat/Open-contributions/master/extras/Linux_Installation.jpg)
 
 ## Pandas Dataframe
 Pandas DataFrame is two-dimensional size-mutable, potentially heterogeneous tabular data structure with labeled axes (rows and columns). A Data frame is a two-dimensional data structure, i.e., data is aligned in a tabular fashion in rows and columns. Pandas DataFrame consists of three principal components, the data, rows, and columns.
@@ -634,7 +634,7 @@ desc
 
 **Output**
 
-![shortcut](extras/Describe1_output.jpg)
+![shortcut](https://github.com/DevIncept/NLP-Module-1/blob/main/extras/Describe1_output.jpg)
 
 **Example #2:** In this example, the describe method is used on Series of strings called by the Name column to see the behaviour with object data type.
 ```python
@@ -659,7 +659,7 @@ desc
 
 **Output**
 
-![shortcut](extras/Describe2_output.jpg)
+![shortcut](https://github.com/DevIncept/NLP-Module-1/blob/main/extras/Describe2_output.jpg)
 
 ### Dataframe/Series.loc[] method
 Pandas provide a unique method to retrieve rows from a Data frame. DataFrame.loc[] method is a method that takes only index labels and returns row or dataframe if the index label exists in the caller data frame.<br>
@@ -685,7 +685,8 @@ print(first, "\n\n\n", second)
 
 **Output**
 
-![shortcut](extras/Loc1_output.jpg)
+![shortcut](https://github.com/DevIncept/NLP-Module-1/blob/main/extras/Loc1_output.jpg)
+
 
 **Example #2:** In this example, Name column is made as the index column and then two single rows are extracted at the same time by passing a list as parameter.
 ```python
@@ -707,7 +708,7 @@ rows
 
 **Output**
 
-![shortcut](extras/Loc2_output.jpg)
+![shortcut](https://github.com/DevIncept/NLP-Module-1/blob/main/extras/Loc2_output.jpg)
 
 ### Dataframe/Series.iloc[] method
 Pandas provide a unique method to retrieve rows from a Data frame. Dataframe.iloc[] method is used when the index label of a data frame is something other than numeric series of 0, 1, 2, 3….n or in case the user doesn’t know the index label. Rows can be extracted using an imaginary index position which isn’t visible in the data frame.<br>
@@ -736,7 +737,7 @@ row1 == row2
 
 **Output**
 
-![shortcut](extras/Iloc1_output.jpg)
+![shortcut](https://github.com/DevIncept/NLP-Module-1/blob/main/extras/Iloc1_output.jpg)
 
 **Example #2:** In this example, multiple rows are extracted first by passing a list and then by passing integers to extract rows between that range. After that, both the values are compared.
 ```python
@@ -758,7 +759,7 @@ row1 == row2
 
 **Output**
 
-![shortcut](extras/Iloc2_output.jpg)
+![shortcut](https://github.com/DevIncept/NLP-Module-1/blob/main/extras/Iloc2_output.jpg)
 
 ### Pandas.read_csv() method
 **read_csv** is an important pandas function to read csv files and do operations on it.<br>
