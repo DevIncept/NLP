@@ -338,9 +338,7 @@ x2=random.randint(100, size=(3, 5))
 
 
 
-## References:
 
-* [W3schools](https://www.w3schools.com/)
 
 
 
