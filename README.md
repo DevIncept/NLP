@@ -1,5 +1,5 @@
-1. [Part1: Numpy basics](Part1:Numpy_basics.md)
-2. [Part1: Numpy notebook](Part1:Numpy notebook.ipynb)
+1. [Part1: Numpy basics](Part1: Numpy_basics.md)
+2. [Part1: Numpy notebook](Part1: Numpy notebook.ipynb)
 3. [Part2: Pandas basics](Part2: Pandas basics.md)
 4. [Part2: Pandas notebook](Part2: Pandas notebook.ipynb)
 5. [Part3: Regular Expression basics](Part3: Regular Expression basics.md)
