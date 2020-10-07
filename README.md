@@ -18,4 +18,4 @@
 
 10. [Part7: Project:Basic functions in NLTK](Basic_functions_in_NLTK.ipynb)
 11. [Part8: Mini Project: Text preprocessing using NLP](Mini_Project.md)
-12. [Part8: Mini Project: Text preprocessing using NLP Notebook](Mini_Project.ipynb)
+
