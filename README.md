@@ -1,7 +1,3 @@
-# Module 1
-
-> 1 Competition, 1 Project 
-
 1. [Part1: Numpy basics](Part1:Numpy_basics.md)
 2. [Part1: Numpy notebook](Part1:Numpy notebook.ipynb)
 3. [Part2: Pandas basics](Part2: Pandas basics.md)
