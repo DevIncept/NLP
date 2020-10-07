@@ -1,21 +1,21 @@
 1. [Part1: Numpy basics](Numpy_basics.md)
 2. [Part1: Numpy notebook](Numpy_notebook.ipynb)
-3. [Part2: Pandas basics](Part2: Pandas basics.md)
-4. [Part2: Pandas notebook](Part2: Pandas notebook.ipynb)
-5. [Part3: Regular Expression basics](Part3: Regular Expression basics.md)
-4. [Part3: Regular Expression notebook](Part3: Regular Expression notebook.ipynb)
-6. [Part4: Competition-Re,Numpy,Pandas(will be held on sunday)](Part4: Competition-Re,Numpy,Pandas.md)
-7. [Part5: Introduction to NLP](Part5: Introduction to NLP.md)
-8. [Part6: Introduction to NLTK](Part6: Introduction to NLTK.md)
-9. [Part7: Basic functions in NLTK](Basic functions in NLTK.md)
+3. [Part2: Pandas basics](Pandas_notebook.md)
+4. [Part2: Pandas notebook](Pandas_notebook.ipynb)
+5. [Part3: Regular Expression basics](Regular_Expression_basics.md)
+4. [Part3: Regular Expression notebook](Regular_Expression_notebook.ipynb)
+6. [Part4: Competition-Re,Numpy,Pandas(will be held on sunday)](Competition.md)
+7. [Part5: Introduction to NLP](Introduction_to_NLP.md)
+8. [Part6: Introduction to NLTK](Introduction_to_NLTK.md)
+9. [Part7: Basic functions in NLTK](Basic_functions_in_NLTK.md)
    * Tokenization
    * Stemming
-   * Parsing
+   * ParsingBasic_functions_in_NLTK.md
    * Lemmatization
    * POS tagging
    * Chunking
   
 
-10. [Part7: Project:Basic functions in NLTK](Part7:Basic functions in NLTK(stemming and lemmatization notebook.ipynb)
-11. [Part8: Mini Project: Text preprocessing using NLP](Part8: Mini Project: Text preprocessing using NLP.md)
-12. [Part8: Mini Project: Text preprocessing using NLP Notebook](Part8: Mini Project: Text preprocessing using NLP Notebook.ipynb)
+10. [Part7: Project:Basic functions in NLTK](Basic_functions_in_NLTK.ipynb)
+11. [Part8: Mini Project: Text preprocessing using NLP](Mini_Project.md)
+12. [Part8: Mini Project: Text preprocessing using NLP Notebook](Mini_Project.ipynb)
