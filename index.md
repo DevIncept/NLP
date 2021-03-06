@@ -6,7 +6,7 @@ The main aim of this training program is to provide you a path you have to work 
 
 1. [Part1: Numpy basics](Numpy_basics.md)
 2. [Part1: Numpy notebook](Numpy_notebook.ipynb)
-3. [Part2: Pandas basics](Pandas_notebook.md)
+3. [Part2: Pandas basics](Pandas_basics.md)
 4. [Part2: Pandas notebook](Pandas_notebook.ipynb)
 5. [Part3: Regular Expression basics](Regular_Expression_basics.md)
 6. [Part3: Regular Expression notebook](Regular_Expression_notebook.ipynb)  
