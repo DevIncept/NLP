@@ -13,7 +13,7 @@ The main aim of this training program is to provide you a path you have to work 
 5. [Part3: Regular Expression basics](Regular_Expression_basics.md)
 6. [Part3: Regular Expression notebook](Regular_Expression_notebook.ipynb)  
 
-7. #### Part4: Competition-Numpy&Pandas - Will be held on saturday-Sunday : Link will be shared on Slack.  
+7. #### Part4: Competition-Numpy&Pandas - Will be held on saturday-Sunday : Link will be shared on Discord.  
 > This is **not mandatory** for completion of course, but will count for merit. 
      
 8. [Part5: Introduction to NLP](Introduction_to_NLP.md)
@@ -30,5 +30,5 @@ The main aim of this training program is to provide you a path you have to work 
 11. [Part7: Project:Basic functions in NLTK](Basic_functions_in_NLTK.ipynb)
 12. [Part8: Mini Project: Text preprocessing using NLP](Mini_Project.md)
 
-13.Part9: **Quizz** **`compulsory for completion`** *(link will be shared on Slack on Monday)* 
+13.Part9: **Quizz** **`compulsory for completion`** *(link will be shared on Discord on Monday)* 
 
